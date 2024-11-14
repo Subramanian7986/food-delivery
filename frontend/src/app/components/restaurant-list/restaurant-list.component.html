@@ -1,0 +1,8 @@
+<div class="restaurant-list container">
+  <div class="restaurant-card" *ngFor="let restaurant of restaurants">
+    <a [routerLink]="['/restaurant', restaurant._id]">
+      <img [src]="'http://localhost:3000/public/images/' + restaurant.image" alt="{{ restaurant.name }}">
+      <h2>{{ restaurant.name }}</h2>
+    </a>
+  </div>
+</div>

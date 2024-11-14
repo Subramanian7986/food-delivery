@@ -1,0 +1,138 @@
+/* Centering and styling for headings */
+.centered {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Restaurant image styling */
+.restaurant-img {
+  width: 80%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 30px;
+  display: block;
+}
+
+/* Individual menu item styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Show pointer cursor to indicate clickable items */
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu item images */
+li img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 2px solid #f0c040;
+}
+
+/* Menu item text styling */
+li p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+li p span {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #888;
+  margin-left: 10px;
+}
+
+/* Add some spacing between price and item name */
+li p span {
+  color: #f0c040;
+}
+
+/* Order form styling */
+.order-form {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Order form heading */
+.order-form h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Order form labels */
+.order-form label {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Order form inputs and textarea */
+.order-form input, .order-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Order summary styling */
+.order-summary {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.order-summary p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Buttons in the order form */
+.order-form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.order-form button[type="button"] {
+  background-color: #6c757d;
+}
+
+/* Add some spacing for order form buttons */
+.order-form button {
+  margin-right: 10px;
+}

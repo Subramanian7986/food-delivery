@@ -1,0 +1,29 @@
+<div *ngIf="restaurant">
+  <h1 class="centered">{{ restaurant.name }}</h1>
+  <img [src]="'http://localhost:3000/public/images/' + restaurant.image" alt="{{restaurant.name}}" class="restaurant-img">
+
+  <h3 class="centered">Menu</h3>
+  <ul>
+    <li *ngFor="let item of restaurant.menuItems" (click)="openOrderForm(item)">
+      <img [src]="'http://localhost:3000/public/images/' + item.image" alt="{{item.name}}">
+      <p>{{ item.name }} <span>- ${{ item.price }}</span></p>
+    </li>
+  </ul>
+
+  <!-- Order form -->
+  <div *ngIf="selectedItem" class="order-form">
+    <h2>Order {{ selectedItem.name }}</h2>
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" [(ngModel)]="order.quantity" (ngModelChange)="updateQuantity($event)" name="quantity" type="number" min="1">
+    
+    <label for="address">Address:</label>
+    <textarea id="address" [(ngModel)]="order.address" name="address" rows="3"></textarea>
+    
+    <p>Total Price: ${{ order.totalPrice.toFixed(2) }}</p>
+    <p>Delivery Charge: ${{ order.deliveryCharge.toFixed(2) }}</p>
+    <p>Final Total: ${{ order.finalTotal.toFixed(2) }}</p>
+
+    <button (click)="placeOrder()">Place Order</button>
+    <button (click)="closeOrderForm()">Cancel</button>
+  </div>
+</div>
