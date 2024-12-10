@@ -30,7 +30,7 @@ Welcome to the **Food Delivery Website** where you can order your favorite dishe
 ### 1. Clone the Repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Subramanian7986/food-delivery.git
 cd food-delivery-website
 ```
 
